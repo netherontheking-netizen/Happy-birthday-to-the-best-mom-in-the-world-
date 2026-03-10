@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>מזל טוב אמא ענבל!</title>
+    <style>
+        body {
+            background-color: #000; /* רקע שחור */
+            color: #2eff2e; /* ירוק של Wicked */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden; /* מונע גלילה מיותרת */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 0 20px #2eff2e;
+            margin-bottom: 20px;
+        }
+
+        /* האזור שבו אמא עפה */
+        .stage {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            /* האנימציה שגורמת לה לעוף */
+            animation: floatUpDown 3s ease-in-out infinite;
+            -webkit-animation: floatUpDown 3s ease-in-out infinite; /* תמיכה לכרום */
+        }
+
+        .mom-img {
+            width: 280px;
+            z-index: 5;
+            position: relative;
+        }
+
+        /* אנימציית ריחוף */
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-40px) rotate(2deg); }
+        }
+
+        @-webkit-keyframes floatUpDown {
+            0%, 100% { -webkit-transform: translateY(0px) rotate(-2deg); }
+            50% { -webkit-transform: translateY(-40px) rotate(2deg); }
+        }
+
+        /* תיבת המוזיקה */
+        .music-player {
+            margin-top: 40px;
+            padding: 15px;
+            border: 2px solid #2eff2e;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 15px #2eff2e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>מזל טוב אמא ענבל! ✨</h1>
+
+    <div class="stage">
+        <!-- כובע מכשפה מעל התמונה -->
+        <div style="font-size: 80px; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); z-index: 10;">🧙‍♀️</div>
+        
+        <!-- התמונה של אמא -->
+        <img src="mom.png" class="mom-img" alt="ענבל המכשפה הטובה" onerror="this.style.display='none'; alert('אזהרה: הקובץ mom.png לא נמצא בתיקייה!')">
+        
+        <!-- מטאטא מתחת לתמונה -->
+        <div style="font-size: 100px; margin-top: -60px; transform: rotate(-10deg);">🧹</div>
+    </div>
+
+    <div class="music-player">
+        <p>לחצי כאן להפעלת "כוח המשיכה" (Defying Gravity):</p>
+        <!-- נגן יוטיוב של השיר מהסרט (2024) -->
+        <iframe width="300" height="80" src="https://www.youtube.com" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    </div>
+
+</body>
+</html>
